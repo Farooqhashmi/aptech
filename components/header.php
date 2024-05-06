@@ -1,3 +1,7 @@
+<?php
+include("php/query.php")
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -85,10 +89,8 @@
             </nav>
         </div>
         <!-- Sidebar End -->
-
-
-        <!-- Content Start -->
-        <div class="content">
+          <!-- Content Start -->
+          <div class="content">
             <!-- Navbar Start -->
             <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
                 <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
