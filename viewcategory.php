@@ -1,5 +1,6 @@
+
 <?php
-include("components/header.php");
+include("component/header.php");
 ?>
  <!-- Blank Start -->
  <div class="container-fluid pt-4 px-4">
@@ -26,10 +27,10 @@ include("components/header.php");
                                         foreach($row as $values){
                                                 ?>
                                       <tr>
-                                            <th scope="row"><?php echo $values['catId']?></th>
-                                            <td><?php echo $values['catName']?></td>
-                                            <td><img src="<?php echo $catref.$values['catImage']?>" alt="" width="80px"></td>
-                                            <td><a href="updatecategory.php?Cid=<?php echo $values['catId'] ?>" class="btn btn-success">Edit</a></td>
+                                            <th scope="row"><?php echo $values['catid']?></th>
+                                            <td><?php echo $values['catname']?></td>
+                                            <td><img src="<?php echo $catref.$values['catimage']?>" alt="" width="80px"></td>
+                                            <td><a href="updatecategory.php?Cid=<?php echo $values['catid'] ?>" class="btn btn-success">Edit</a></td>
                                             <td><a href="" class="btn btn-danger">Delete</a></td>
                                         </tr>
                                                 <?php
@@ -44,5 +45,5 @@ include("components/header.php");
                 </div>
             </div>   
 <?php
-include("components/footer.php");
+include("component/footer.php");
 ?>
