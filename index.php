@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 
 <?php
     include ("components/header.php");
         ?>
      
+=======
+<?php include ("components/header.php"); ?>
+
+>>>>>>> 9f5452dc6eea655d2047dda71aad0980e5a85bed
 
             <!-- Sale & Revenue Start -->
             <div class="container-fluid pt-4 px-4">
@@ -269,6 +274,11 @@
             </div>
             <!-- Widgets End -->
 
+<<<<<<< HEAD
             <?php
             include("components/footer.php");
             ?>
+=======
+
+            <?php include ("components/footer.php"); ?>
+>>>>>>> 9f5452dc6eea655d2047dda71aad0980e5a85bed
