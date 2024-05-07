@@ -9,7 +9,7 @@ include("components/header.php");
                 <h6 class="mb-4">Add category</h6>
                 <form method="post" enctype="multipart/form-data"> <!-- Added method and enctype attributes -->
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Category type</label> <!-- Corrected label text -->
+                        <label for="exampleInputEmail1" class="form-label">Category name</label> <!-- Corrected label text -->
                         <input type="text" class="form-control" name="cName" id="exampleInputEmail1" aria-describedby="emailHelp">
                         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                     </div>
