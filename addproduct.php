@@ -37,18 +37,18 @@ include ("components/header.php");
                                 <div class="mb-3">
                                 <label for="floatingtextarea" >Product Description</label>
                                 <textarea class="form-control"
-                                    id="emailHelp" name="productDescription" style="height: 150px;"></textarea>
+                                    id="emailHelp" name="pDescription" style="height: 150px;"></textarea>
                         
                                 </div>
                                <div class="mb-3">
                                     <label for="Product Quantity" class="form-label">Product Quantity</label>
-                                    <input type="number" name="productQuantity" class="form-control" id="exampleInputEmail1"
+                                    <input type="number" name="pQuantity" class="form-control" id="exampleInputEmail1"
                                         aria-describedby="emailHelp">
                                     <div id="emailHelp" class="form-text">
                                     </div>
                                     <div class="mb-3">
                                     <label for="Product price" class="form-label">Product Price</label>
-                                    <input type="number" name="productPrice" class="form-control" id="exampleInputEmail1"
+                                    <input type="number" name="pPrice" class="form-control" id="exampleInputEmail1"
                                         aria-describedby="emailHelp">
                                     <div id="emailHelp" class="form-text">
                                     </div>

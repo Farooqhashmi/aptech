@@ -267,8 +267,4 @@ include ("components/header.php");
             <!-- Widgets End -->
 <?php
 include ("components/footer.php");
-<<<<<<< HEAD
 ?>
-=======
-?>
->>>>>>> 92b0781b8d86aa9badc6e8d675504bd701565e0b
