@@ -24,7 +24,7 @@ if(isset($_Get['Cid'])){
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Image</label>
-                        <input type="file" name="cImage" class="form-control" id="exampleInputPassword1">
+                        <input type="file" name="catImage" class="form-control" id="exampleInputPassword1">
                         <?php if(isset($catData['catImage'])): ?>
                             <img src="<?php echo $catref . $catData['catImage']; ?>" width="80" alt="">
                         <?php endif; ?>

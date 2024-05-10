@@ -7,7 +7,7 @@ include("components/header.php");
                     <div class="col-md">
                     
             <!-- Blank End -->
-            <h6 class="mb-4">All Categories</h6>
+            <h6 class="mb-4">All Products</h6>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead> 
@@ -25,22 +25,22 @@ include("components/header.php");
                                     </thead>
                                     <tbody>
                                         <?php
-                                        $query = $pdo->query("SELECT `products`.*, `categories`.`catName`
-                                        FROM `products` 
-                                            INNER JOIN `categories` ON `products`.`productcatId` = `categories`.`catId`;");
+                                        $query = $pdo->query("SELECT products.*, categories.catName
+                                        FROM products 
+                                            INNER JOIN categories ON products.productcatId = categories.catId;");
                                         $prorow = $query ->fetchAll(PDO::FETCH_ASSOC);
                                         foreach($prorow as $values){
                                                 ?>
                                       <tr>
-                                            <td scope="row"><?php echo $values['productcatId']?></td>
+                                            <td scope="row"><?php echo $values['productId']?></td>
                                             <td><?php echo $values['productName']?></td>
                                             <td><?php echo $values['productPrice']?></td>
                                             <td><?php echo $values['productDescription']?></td>
                                             <td><?php echo $values['catName']?></td>
                                             <td><?php echo $values['productQuantity']?></td>
-                                            <td><img src="<?php echo $proref.$values['productImage']?>" alt="" width="80px"></td>
-                                            <td><a href="updateproduct.php?pId=<?php echo $values['productcatId'] ?>" class="btn btn-success">Edit</a></td>
-                                            <td><a href="?prodeleteKey=<?php echo $values['productcatId'] ?>" class="btn btn-danger">Delete</a></td>
+                                            <td><img src="<?php echo $productref.$values['productImage']?>" alt="" width="80px"></td>
+                                            <td><a href="updateproduct.php?pId=<?php echo $values['productId'] ?>" class="btn btn-success">Edit</a></td>
+                                            <td><a href="?prodeleteKey=<?php echo $values['productId'] ?>" class="btn btn-danger">Delete</a></td>
                                         </tr>
                                                 <?php
 

@@ -17,7 +17,7 @@ include ("components/header.php");
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">Image</label>
-                                    <input type="file" name="cImage" class="form-control" id="exampleInputPassword1">
+                                    <input type="file" name="catImage" class="form-control" id="exampleInputPassword1">
                                 </div>
                                 <!-- <div class="mb-3 form-check">
                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">

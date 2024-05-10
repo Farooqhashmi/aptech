@@ -15,7 +15,7 @@ include ("components/header.php");
                                     <div id="emailHelp" class="form-text">
                                     </div>
                                 </div>
-                                <label for="Product Catgory"  class="form-label">Product Category</label>
+                                <label for="Product Category"  class="form-label">Product Category</label>
                                 <div class="form mb-3">
                                  
                                 <select class="form-select" name="pCatid" id=""
@@ -47,7 +47,7 @@ include ("components/header.php");
                                     <div id="emailHelp" class="form-text">
                                     </div>
                                     <div class="mb-3">
-                                    <label for="Product price" class="form-label">Product Price</label>
+                                    <label for="Product Price" class="form-label">Product Price</label>
                                     <input type="number" name="pPrice" class="form-control" id="exampleInputEmail1"
                                         aria-describedby="emailHelp">
                                     <div id="emailHelp" class="form-text">
