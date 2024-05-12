@@ -19,7 +19,8 @@ if(isset($_GET['Cid'])){
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Category Name</label>
                         <input type="text" class="form-control" name="catName" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" value="<?php echo isset($catData['catName']) ? $catData['catName'] : ''; ?>">
+                            aria-describedby="emailHelp" value="<?php echo isset($catData['catName']) ? 
+                            $catData['catName'] : ''; ?>">
                         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                     </div>
                     <div class="mb-3">

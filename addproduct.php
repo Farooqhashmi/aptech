@@ -24,7 +24,8 @@ include ("components/header.php");
                                 $row = $query->fetchAll(PDO::FETCH_ASSOC);
                                 foreach($row as $values) {
                                     ?>
-                                    <option value="<?php echo $values['catId'] ?>"><?php echo $values['catName'] ?></option>
+                                    <option value="<?php echo $values['catId'] ?>">
+                                    <?php echo $values['catName'] ?></option>
                                     <?php
                                 }
                                 ?>   
@@ -32,12 +33,13 @@ include ("components/header.php");
                         </div>
                         <div class="mb-3">
                             <label for="productDescription">Product Description</label>
-                            <textarea class="form-control" id="productDescription" name="productDescription" style="height: 150px;"></textarea>
+                            <textarea class="form-control" id="productDescription" name="productDescription" 
+                            style="height: 150px;"></textarea>
                         </div>
                         <div class="mb-3">
                             <label for="productQuantity" class="form-label">Product Quantity</label>
-                            <input type="number" name="productQuantity" class="form-control" id="productQuantity"
-                                aria-describedby="emailHelp">
+                            <input type="number" name="productQuantity" class="form-control" 
+                            id="productQuantity" aria-describedby="emailHelp">
                             <div id="emailHelpProductQuantity" class="form-text">
                             </div>
                         </div>

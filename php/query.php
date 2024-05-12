@@ -13,7 +13,8 @@ if (isset($_POST["addcategory"])) {
 
     if ($extension == "jpg" || $extension == "jpeg" || $extension == "png" || $extension == "webp") {
         if (move_uploaded_file($catTmpName, $desig)) {
-            $query = $pdo->prepare("INSERT INTO `categories`( `catName`, `catImage`) VALUES (:productName,:productImage)");
+            $query = $pdo->prepare("INSERT INTO `categories`( `catName`, `catImage`) 
+            VALUES (:productName,:productImage)");
             $query->bindParam(":productName", $catName);
             $query->bindParam(":productImage", $catImageName);
             $query->execute();
@@ -39,12 +40,14 @@ if (isset($_POST['editcategory'])) {
 
         if ($extension == "jpg" || $extension == "png" || $extension == "jpeg" || $extension == "webp") {
             if (move_uploaded_file($catTmpname, $desig)) {
-                $query = $pdo->prepare("UPDATE categories set catName = :productName , catImage = :productImage WHERE catId = :pid");
+                $query = $pdo->prepare("UPDATE categories set catName = :productName , catImage = 
+                :productImage WHERE catId = :pid");
                 $query->bindParam(":pid", $catId);
                 $query->bindParam(":productName", $catName);
                 $query->bindParam(":productImage", $catImageName);
                 $query->execute();
-                echo "<script>alert('Category Updated'); location.assign('viewcategory.php');</script>";
+                echo "<script>alert('Category Updated'); 
+                location.assign('viewcategory.php');</script>";
             } else {
                 echo "<script>alert('fail')</script>";
             }
@@ -54,7 +57,8 @@ if (isset($_POST['editcategory'])) {
         $query->bindParam(":pid", $catId);
         $query->bindParam(":pname", $catName);
         $query->execute();
-        echo "<script>alert('Category Updated without Image'); location.assign('viewcategory.php');</script>";
+        echo "<script>alert('Category Updated without Image'); 
+        location.assign('viewcategory.php');</script>";
     }
 }
 
@@ -64,7 +68,8 @@ if (isset($_GET['deleteKey'])) {
     $query = $pdo->prepare("DELETE FROM categories Where catId = :pid");
     $query->bindParam(":pid", $catId);
     $query->execute();
-    echo "<script>alert('Category Deleted'); location.assign('viewcategory.php');</script>";
+    echo "<script>alert('Category Deleted'); 
+    location.assign('viewcategory.php');</script>";
 }
 
 //Add product
@@ -81,7 +86,9 @@ if (isset($_POST['addproduct'])) {
 
     if ($extension == "jpg" || $extension == "png" || $extension == "jpeg" || $extension == "webp") {
         if (move_uploaded_file($productTmpName, $desig)) {
-            $query = $pdo->prepare("INSERT INTO products(productname, productquantity, productprice, productdescription, productImage, productcatid) VALUES(:pn,:pq,:pp,:pd,:pi,:pc)");
+            $query = $pdo->prepare("INSERT INTO products(productname, productquantity, 
+            productprice, productdescription, productImage, productcatid) 
+            VALUES(:pn,:pq,:pp,:pd,:pi,:pc)");
             $query->bindParam(":pn", $productName);
             $query->bindParam(":pq", $productQuantity);
             $query->bindParam(":pp", $productPrice);
@@ -89,7 +96,8 @@ if (isset($_POST['addproduct'])) {
             $query->bindParam(":pi", $productImageName);
             $query->bindParam(":pc", $productCatid);
             $query->execute();
-            echo "<script>alert('product added successfully'); location.assign('viewproduct.php');</script>";
+            echo "<script>alert('product added successfully'); 
+            location.assign('viewproduct.php');</script>";
         } else {
             echo "<script>alert('invalid file type')</script>";
         }
@@ -102,7 +110,8 @@ if (isset($_GET['prodeleteKey'])) {
     $query = $pdo->prepare("DELETE FROM products Where productid = :pid");
     $query->bindParam(":pid", $proid);
     $query->execute();
-    echo "<script>alert('Product Deleted'); location.assign('viewproduct.php');</script>";
+    echo "<script>alert('Product Deleted'); 
+    location.assign('viewproduct.php');</script>";
 }
 
 // update product
@@ -122,7 +131,9 @@ if (isset($_POST['updateproduct'])) {
 
         if ($extension == "jpg" || $extension == "png" || $extension == "jpeg" || $extension == "webp") {
             if (move_uploaded_file($productTmpName, $desig)) {
-                $query = $pdo->prepare("UPDATE `products` SET `productName`=:pn, `productQuantity`=:pq, `productPrice`=:pp, `productDescription`=:pd, `productcatId`=:pc, `productImage`=:pi WHERE `productId`=:pid");
+                $query = $pdo->prepare("UPDATE `products` SET `productName`=:pn, 
+                `productQuantity`=:pq, `productPrice`=:pp, `productDescription`=:pd, 
+                `productcatId`=:pc, `productImage`=:pi WHERE `productId`=:pid");
                 $query->bindParam(":pn", $productName);
                 $query->bindParam(":pq", $productQuantity);
                 $query->bindParam(":pp", $productPrice);
@@ -137,7 +148,9 @@ if (isset($_POST['updateproduct'])) {
             }
         }
     } else {
-        $query = $pdo->prepare("UPDATE `products` SET `productName`=:pn, `productQuantity`=:pq, `productPrice`=:pp, `productDescription`=:pd, `productcatId`=:pc WHERE `productId`=:pid");
+        $query = $pdo->prepare("UPDATE `products` SET `productName`=:pn, 
+        `productQuantity`=:pq, `productPrice`=:pp, `productDescription`=:pd, 
+        `productcatId`=:pc WHERE `productId`=:pid");
         $query->bindParam(":pn", $productName);
         $query->bindParam(":pq", $productQuantity);
         $query->bindParam(":pp", $productPrice);
